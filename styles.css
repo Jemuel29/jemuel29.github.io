@@ -1,0 +1,273 @@
+:root {
+  --bg: #f4f0e6;
+  --panel: #fff8e8;
+  --ink: #121212;
+  --accent: #ff6b35;
+  --accent-2: #2d6cdf;
+  --accent-3: #ffd166;
+  --shadow: 6px 6px 0 var(--ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.page-shell {
+  min-height: 100vh;
+  padding: 24px;
+  display: grid;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body.scrolled .top-nav {
+  transform: translateY(-120%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-card,
+.content-card,
+.top-nav {
+  background: var(--panel);
+  border: 3px solid var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.top-nav {
+  position: sticky;
+  top: 12px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  gap: 12px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-brand {
+  color: var(--ink);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-links a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 8px 10px;
+  border: 2px solid transparent;
+}
+
+.nav-links a:hover {
+  border-color: var(--ink);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 24px;
+  height: 3px;
+  background: var(--ink);
+}
+
+.hero-card {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1.2fr 0.8fr;
+  padding: 28px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  color: var(--accent-2);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1;
+}
+
+.subtitle {
+  margin: 10px 0 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.summary {
+  margin: 16px 0 0;
+  max-width: 640px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 16px;
+  border: 3px solid var(--ink);
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.button.primary {
+  background: var(--accent);
+}
+
+.button.secondary {
+  background: var(--accent-3);
+}
+
+.hero-panel {
+  background: #ffffff;
+  border: 3px solid var(--ink);
+  padding: 20px;
+}
+
+.panel-badge {
+  display: inline-block;
+  background: var(--accent-2);
+  color: white;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hero-panel ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  line-height: 1.7;
+}
+
+.content-card {
+  padding: 24px;
+}
+
+.section-stack {
+  display: grid;
+  gap: 24px;
+}
+
+.section-screen {
+  min-height: calc(100vh - 48px);
+  display: flex;
+  align-items: center;
+  scroll-snap-align: start;
+  scroll-margin-top: 0;
+}
+
+.section-inner {
+  width: 100%;
+  padding: 24px;
+  border: 3px solid var(--ink);
+  background: white;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.skills-grid,
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.skill-card,
+.project-card {
+  border: 3px solid var(--ink);
+  padding: 16px;
+  background: white;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 700;
+  color: var(--accent-2);
+}
+
+@media (max-width: 800px) {
+  .hero-card {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-screen {
+    min-height: auto;
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .top-nav {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 8px;
+  }
+
+  .top-nav.open .nav-links {
+    display: flex;
+  }
+}
