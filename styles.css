@@ -30,9 +30,9 @@ body.scrolled .top-nav {
 }
 
 .page-shell {
-  max-width: 860px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.25rem 4rem;
+  padding: 0 2rem 4rem;
 }
 
 .top-nav {
@@ -102,12 +102,12 @@ body.scrolled .top-nav {
 
 .hero-section {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  align-items: start;
+  grid-template-columns: 1.3fr 0.9fr;
+  align-items: center;
+  gap: 5rem;
+
   min-height: calc(100vh - 70px);
-  padding: 3rem 0 4rem;
-  scroll-margin-top: 100px;
+  padding: 3rem 0;
 }
 
 .section-screen {
