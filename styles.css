@@ -42,21 +42,21 @@ body.scrolled .top-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;  
+  width: 100%;
   padding: 1rem 0;
   background: rgba(241, 233, 221, 0.98);
   border-bottom: 1px solid rgba(43, 42, 41, 0.12);
 }
 
 .nav-brand {
-  margin-left: 1.5rem;  
+  margin-left: 1.5rem;
   font-family: 'Space Grotesk', 'Manrope', sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   text-decoration: none;
-  color: #2b2a29;
+  color: #000000;
 }
 
 .nav-toggle {
@@ -76,7 +76,7 @@ body.scrolled .top-nav {
   width: 20px;
   height: 1px;
   margin: 0 auto;
-  background: var(--text);
+  background: #000000;
 }
 
 .nav-links {
@@ -102,7 +102,9 @@ body.scrolled .top-nav {
 
 .hero-section {
   display: grid;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
   min-height: calc(100vh - 70px);
   padding: 3rem 0 4rem;
   scroll-margin-top: 100px;
@@ -251,11 +253,11 @@ body.scrolled .top-nav {
 }
 
 .skills-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .projects-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .skill-card,
@@ -286,6 +288,17 @@ body.scrolled .top-nav {
   font-size: 0.95rem;
 }
 
+@media (max-width: 1024px) {
+  .page-shell {
+    padding: 0 1rem 4rem;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding: 2.5rem 0 3.5rem;
+  }
+}
+
 @media (max-width: 760px) {
   .top-nav {
     padding: 1rem 0;
@@ -304,8 +317,8 @@ body.scrolled .top-nav {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.25rem;
-    padding: 0.8rem 0 1rem;
-    background: rgba(11, 12, 16, 0.98);
+    padding: 0.8rem 1rem 1rem;
+    background: rgba(241, 233, 221, 0.98);
     border-top: 1px solid var(--line);
   }
 
@@ -319,12 +332,31 @@ body.scrolled .top-nav {
   }
 
   .hero-section {
-    min-height: auto;
+    grid-template-columns: 1fr;
     padding: 2rem 0 3rem;
   }
 
-  .skills-grid,
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .hero-text,
+  .hero-panel {
+    width: 100%;
+  }
+
+  .hero-panel {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+  }
+}
+
+@media (min-width: 1025px) {
+  .hero-section {
+    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 1fr);
+    gap: 2.5rem;
+  }
+
+  .hero-panel {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
   }
 }
