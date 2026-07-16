@@ -105,11 +105,11 @@ body.scrolled .top-nav {
   display: grid;
   grid-template-columns: 1.3fr 0.9fr;
   align-items: center;
-  gap: 5rem;
-
+  gap: 2.5rem;
   min-height: calc(100vh - 70px);
   padding: 3rem 0;
 }
+
 
 .section-screen {
   padding: 2.2rem 0 2.8rem;
@@ -187,8 +187,8 @@ body.scrolled .top-nav {
 }
 
 .hero-panel {
-  margin-top: 2rem;
-  padding-top: 1.25rem;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
   border-top: 1px solid var(--line);
 }
 
@@ -446,7 +446,7 @@ body.scrolled .top-nav {
 .form-input:focus{outline:none;border-color:rgb(var(--gray-400));}
 textarea.form-input{resize:vertical;min-height:100px;font-family:var(--font-body);}
 .submit-btn{
-  background-color: #615952;
+  background-color: #e0ceb6;
   border: 1px solid #000000;
   border-radius:16px;
   color: rgb(0, 0, 0);
