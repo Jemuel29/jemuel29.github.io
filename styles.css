@@ -245,7 +245,7 @@ body.scrolled .top-nav {
 .section-divider::after {
   content: "";
   flex: 1;
-  height: 1px;
+  height: 2px;
   background: linear-gradient(90deg, transparent, rgba(43, 42, 41, 0.22), transparent);
   transform: translateX(0);
 }
