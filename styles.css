@@ -187,7 +187,7 @@ body.scrolled .top-nav {
 }
 
 .hero-panel {
-  margin-top: 1rem;
+  transform: translateY(-50px);
   padding-top: 0.75rem;
   border-top: 1px solid var(--line);
 }
@@ -220,7 +220,7 @@ body.scrolled .top-nav {
   min-height: calc(100vh - 140px);
   display: grid;
   place-items: center start;
-  padding: 4.5rem 0 5.5rem;
+  padding: 2.5rem 0 5.5rem;
   border-top: 1px solid var(--line);
 }
 
