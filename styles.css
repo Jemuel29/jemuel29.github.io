@@ -125,7 +125,7 @@ body.scrolled .top-nav {
 
 .eyebrow {
   margin-bottom: 0.8rem;
-  color: var(--muted);
+  color: #2b2a29 ;
   font-size: 0.9rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -134,19 +134,20 @@ body.scrolled .top-nav {
 .hero-section h1 {
   font-size: clamp(2.2rem, 4.2vw, 3.4rem);
   line-height: 1.08;
+  color: #000000;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .subtitle {
   font-size: 1.05rem;
-  color: #2b2a29;
+  color: #000000;
   margin-bottom: 0.85rem;
 }
 
 .summary {
   max-width: 680px;
-  color: var(--muted);
+  color: #2b2a29;
   margin-bottom: 1.4rem;
 }
 
@@ -201,7 +202,7 @@ body.scrolled .top-nav {
 .panel-badge {
   display: inline-block;
   margin-bottom: 0.7rem;
-  color: var(--muted);
+  color: color #2b2a29;
   font-size: 0.84rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -215,10 +216,11 @@ body.scrolled .top-nav {
 
 .hero-panel ul {
   padding-left: 1.1rem;
-  color: var(--muted);
+  color: #2b2a29;
 }
 
 .hero-panel li + li {
+  color: #2b2a29;
   margin-top: 0.35rem;
 }
 
@@ -256,7 +258,7 @@ body.scrolled .top-nav {
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #2b2a29;
 }
 
 .section-inner {
@@ -267,13 +269,14 @@ body.scrolled .top-nav {
 .section-inner h3 {
   font-size: 1.1rem;
   font-weight: 600;
+  color: #000000;
   margin-bottom: 1.5rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .section-inner p {
-  color: var(--muted);
+  color: #2b2a29;
   max-width: 720px;
 }
 
@@ -328,7 +331,7 @@ body.scrolled .top-nav {
 
 .card__title i {
   font-size: 1rem;
-  color: var(--accent);
+  color: #000000;
 }
 
 .summary-list {
@@ -404,7 +407,7 @@ body.scrolled .top-nav {
 
 .timeline-date {
   font-size: 0.8rem;
-  color: var(--muted);
+  color: #2b2a29;
 }
 
 .timeline-sub {
@@ -418,7 +421,7 @@ body.scrolled .top-nav {
 .timeline-desc {
   margin-bottom: 0.7rem;
   font-size: 0.9rem;
-  color: var(--muted);
+  color: #2b2a29;
 }
 
 .tag-row {
@@ -528,7 +531,7 @@ body.scrolled .top-nav {
 }
 
 .project-card p {
-  color: var(--muted);
+  color: #2b2a29;
   font-size: 0.8rem;
 }
 
